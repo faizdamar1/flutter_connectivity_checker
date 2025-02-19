@@ -1,16 +1,57 @@
-# flutter_connectivity
+# Flutter Connectivity Checker
 
-A new Flutter project.
+Aplikasi ini adalah proyek Flutter yang menggunakan `flutter_bloc` dan `connectivity_plus` untuk memantau status koneksi internet secara real-time di setiap halaman aplikasi.
 
-## Getting Started
+## ✨ Fitur
 
-This project is a starting point for a Flutter application.
+- Memantau konektivitas internet menggunakan `connectivity_plus`
+- Menampilkan pop-up ketika tidak ada koneksi internet
+- Menggunakan `flutter_bloc` untuk manajemen state
+- Pop-up tidak bisa ditutup sampai koneksi kembali
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Teknologi yang Digunakan
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter** (Dart)
+- **flutter\_bloc 9.0.0**
+- **connectivity\_plus 6.1.3**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Cara Menjalankan Proyek
+
+1. Clone repositori ini:
+   ```sh
+   git clone https://github.com/faizdamar1/flutter_connectivity_checker
+   cd flutter_connectivity_checker
+   ```
+2. Install dependencies:
+   ```sh
+   flutter pub get
+   ```
+3. Jalankan aplikasi:
+   ```sh
+   flutter run
+   ```
+
+## 🛠️ Mengatasi Masalah
+
+### 1. Error NDK Version
+
+Jika mendapatkan error terkait NDK Version, tambahkan ini ke `android/app/build.gradle.kts`:
+
+```kotlin
+android {
+    ndkVersion = "27.0.12077973"
+}
+```
+
+### 2. WillPopScope Deprecated
+
+Ganti `WillPopScope` dengan `PopScope` untuk mendukung fitur **Android predictive back**.
+
+## 📜 Lisensi
+
+Proyek ini menggunakan lisensi MIT.
+
+---
+
+Dibuat dengan ❤️ oleh Faiz Damar.
+
